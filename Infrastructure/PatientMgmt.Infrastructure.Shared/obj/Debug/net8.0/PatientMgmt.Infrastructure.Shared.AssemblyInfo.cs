@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PatientMgmt.Infrastructure.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3b195ec16c4d82e702f799dab86bb4db99c9e38")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21839df7339b575006610586da9ed03b02328903")]
 [assembly: System.Reflection.AssemblyProductAttribute("PatientMgmt.Infrastructure.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PatientMgmt.Infrastructure.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
