@@ -21,3 +21,4 @@ Version.cpp
 *.dll
 *.exe
 *.pdb
+*.conf
