@@ -74,7 +74,8 @@ DbSet<Appointment> Appointments{ get; set; }
         modelBuilder.Entity<TestResult>()
         .HasOne(tr => tr.Appointment)
         .WithMany(a => a.TestResults)
-        .HasForeignKey(tr => tr.AppointmentId);
+        .HasForeignKey(tr => tr.AppointmentId)
+        .OnDelete(DeleteBehavior.Restrict);
 
         #endregion
     }
