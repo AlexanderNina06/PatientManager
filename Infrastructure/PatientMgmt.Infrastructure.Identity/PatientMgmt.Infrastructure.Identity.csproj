@@ -20,4 +20,10 @@
     <PackageReference Include="MimeKit" Version="4.7.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\PatientMgmt.Core.Domain\PatientMgmt.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\Core\PatientMgmt.Core.Application\PatientMgmt.Core.Application.csproj" />
+    <ProjectReference Include="..\PatientMgmt.Infrastructure.Shared\PatientMgmt.Infrastructure.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

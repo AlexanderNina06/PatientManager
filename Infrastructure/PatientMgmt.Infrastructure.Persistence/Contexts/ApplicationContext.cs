@@ -69,7 +69,7 @@ DbSet<Appointment> Appointments{ get; set; }
         .HasOne<Doctor>(d => d.doctor)
         .WithMany()
         .HasForeignKey(d => d.DoctorId)
-        .OnDelete(DeleteBehavior.SetNull);
+        .OnDelete(DeleteBehavior.Restrict);
         
         modelBuilder.Entity<TestResult>()
         .HasOne(tr => tr.Appointment)

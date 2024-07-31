@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using OnlineStoreMS.Core.Application.Enums;
-using OnlineStoreMS.Infrastructure.Identity.Entities;
+using PatientMgmt.Infrastructure.Identity.Entities;
+using PatientMgmt.Core.Domain;
 
-namespace OnlineStoreMS.Infrastructure.Identity.Seeds
+namespace PatientMgmt.Infrastructure.Identity.Seeds
 {
-	public static class DefaultSuperAdminUser
+	public static class DefaultAdminUser
 	{
 		public static async Task SeedAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
 		{
@@ -22,9 +22,9 @@ namespace OnlineStoreMS.Infrastructure.Identity.Seeds
 				if (user == null)
 				{
 					await userManager.CreateAsync(defaultUser, "1234Pa$$word!");
-					await userManager.AddToRoleAsync(defaultUser, Roles.Basic.ToString());
+					await userManager.AddToRoleAsync(defaultUser, Roles.Assistant.ToString());
 					await userManager.AddToRoleAsync(defaultUser, Roles.Admin.ToString());
-					await userManager.AddToRoleAsync(defaultUser, Roles.SuperAdmin.ToString());
+					
 				}
 
 			}

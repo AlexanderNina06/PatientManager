@@ -1,17 +1,14 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using OnlineStoreMS.Infrastructure.Identity.Entities;
+using PatientMgmt.Infrastructure.Identity.Entities;
 
 
-namespace OnlineStoreMS.Infrastructure.Identity.Contexts
+namespace PatientMgmt.Infrastructure.Identity.Contexts
 {
     public class IdentityContext : IdentityDbContext<ApplicationUser>
 	{
-        public IdentityContext(DbContextOptions<IdentityContext> options) : base(options)
-        {
-
-        }
+        public IdentityContext(DbContextOptions<IdentityContext> options) : base(options){}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
