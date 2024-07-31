@@ -3,5 +3,6 @@
 public enum ApptAndResultStatus
 {
 pending,
-completed
+completed,
+InProcess
 }
