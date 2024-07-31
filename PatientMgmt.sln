@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientMgmt.Infrastructure.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientMgmt.Infrastructure.Shared", "Infrastructure\PatientMgmt.Infrastructure.Shared\PatientMgmt.Infrastructure.Shared.csproj", "{553D147A-62DF-4C41-946F-E302E2EB562E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientMgmt.Infrastructure.Identity", "Infrastructure\PatientMgmt.Infrastructure.Identity\PatientMgmt.Infrastructure.Identity.csproj", "{F1F516A1-BFA8-4493-83F0-E5871836FD04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{553D147A-62DF-4C41-946F-E302E2EB562E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{553D147A-62DF-4C41-946F-E302E2EB562E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{553D147A-62DF-4C41-946F-E302E2EB562E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F516A1-BFA8-4493-83F0-E5871836FD04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F516A1-BFA8-4493-83F0-E5871836FD04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F516A1-BFA8-4493-83F0-E5871836FD04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F516A1-BFA8-4493-83F0-E5871836FD04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +58,6 @@ Global
 		{29643608-1BE1-4461-AEDF-AB597DD4F3DC} = {FC76B941-A7B6-48F7-92CC-D669C0F39B6C}
 		{8A1C0296-EF0B-4252-BDEC-2BD0B6FB2A88} = {AE0FBB28-2FD9-4BB8-84BA-EA0178AEE845}
 		{553D147A-62DF-4C41-946F-E302E2EB562E} = {AE0FBB28-2FD9-4BB8-84BA-EA0178AEE845}
+		{F1F516A1-BFA8-4493-83F0-E5871836FD04} = {AE0FBB28-2FD9-4BB8-84BA-EA0178AEE845}
 	EndGlobalSection
 EndGlobal
