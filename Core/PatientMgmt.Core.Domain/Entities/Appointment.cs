@@ -6,7 +6,6 @@ public class Appointment : AuditableBaseEntity
 {
 public DateTime AppointmentDateTime { get; set; }
 public string Cause {get; set; }
-
 public ICollection<LabTest> tests { get; set; }
 public ApptAndResultStatus appointmentStatus{ get; set; }
 
