@@ -85,5 +85,15 @@ CreateMap<TestResult,TestResultsViewModel>()
 .ForMember(dest => dest.Appointment, opt => opt.Ignore())
 .ForMember(dest => dest.patient, opt => opt.Ignore());
 
+// User Mappings
+CreateMap<AuthenticationRequest, LoginViewModel>()
+	.ForMember(dest => dest.HasError, opt => opt.Ignore())
+	.ForMember(dest => dest.Error, opt => opt.Ignore())
+	.ReverseMap();
+
+CreateMap<RegisterRequest, SaveUserViewModel>()
+	.ForMember(dest => dest.HasError, opt => opt.Ignore())
+	.ForMember(dest => dest.Error, opt => opt.Ignore())
+	.ReverseMap();
 }
 }
