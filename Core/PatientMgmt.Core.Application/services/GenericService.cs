@@ -32,7 +32,7 @@ where Entity : class
         await _genericRepository.DeleteAsync(entity);
     }
 
-    public async Task<List<ViewModel>> GetAll()
+    public virtual async Task<List<ViewModel>> GetAll()
     {
         var entity = await _genericRepository.GetAllAsync();
 
@@ -48,7 +48,7 @@ where Entity : class
         return vm;
     }
 
-    public async Task Update(SaveViewModel vm, int id)
+    public virtual async Task Update(SaveViewModel vm, int id)
     {
        Entity entity = _mapper.Map<Entity>(vm);
 
