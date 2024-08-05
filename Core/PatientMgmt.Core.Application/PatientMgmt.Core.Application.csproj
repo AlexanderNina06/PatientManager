@@ -18,6 +18,7 @@
   <ItemGroup>
     <Folder Include="DTOs\" />
     <Folder Include="DTOs\Account\" />
+    <Folder Include="services\" />
   </ItemGroup>
 
   <PropertyGroup>
