@@ -15,7 +15,7 @@ where Entity : class
     _genericRepository = genericRepository;
     _mapper = mapper;
   }
-    public async Task<SaveViewModel> Add(SaveViewModel vm)
+    public virtual async Task<SaveViewModel> Add(SaveViewModel vm)
     {
         Entity entity = _mapper.Map<Entity>(vm);
 
