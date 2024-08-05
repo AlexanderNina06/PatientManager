@@ -574,3 +574,5 @@ C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\refint\PatientMgmt.dl
 C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\PatientMgmt.pdb
 C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\PatientMgmt.genruntimeconfig.cache
 C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\ref\PatientMgmt.dll
+C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

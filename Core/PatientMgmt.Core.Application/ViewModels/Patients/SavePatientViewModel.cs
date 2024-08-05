@@ -15,5 +15,5 @@ public bool isSmoker { get; set; }
 public bool hasAllergies { get; set; } 
 public string? Picture { get; set; } 
 public IFormFile PictureFile { get; set; }
-
+public string? UserId { get; set; } 
 }

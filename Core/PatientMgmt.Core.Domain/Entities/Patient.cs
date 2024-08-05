@@ -11,5 +11,5 @@ public DateTime DateOfBirth { get; set; }
 public bool isSmoker { get; set; } 
 public bool hasAllergies { get; set; } 
 public string? Picture { get; set; } 
-
+public string UserId { get; set; }
 }
