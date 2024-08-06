@@ -24,6 +24,9 @@ public static void AddPersistenceInfrastructure(this IServiceCollection services
 
     #region Repositories
     services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+    services.AddTransient<IDoctorRepository, DoctorRepository>();
+    services.AddTransient<IPatientRepository, PatientRepository>();
+    services.AddTransient<ILabTestRepository, LabTestRepository>();
     #endregion
 }
 }

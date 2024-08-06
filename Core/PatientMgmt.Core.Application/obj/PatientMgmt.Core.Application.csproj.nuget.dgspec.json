@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {}
+    "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {}
   },
   "projects": {
-    "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {
+    "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj",
+        "projectUniqueName": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj",
         "projectName": "PatientMgmt.Core.Application",
-        "projectPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj",
+        "projectPath": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj",
         "packagesPath": "C:\\Users\\18297\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\obj\\",
+        "outputPath": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\18297\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj": {
-                "projectPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj"
+              "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj"
               }
             }
           }
@@ -103,14 +103,14 @@
         }
       }
     },
-    "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj": {
+    "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj",
         "projectName": "PatientMgmt.Core.Domain",
-        "projectPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj",
+        "projectPath": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj",
         "packagesPath": "C:\\Users\\18297\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\obj\\",
+        "outputPath": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\18297\\AppData\\Roaming\\NuGet\\NuGet.Config",
