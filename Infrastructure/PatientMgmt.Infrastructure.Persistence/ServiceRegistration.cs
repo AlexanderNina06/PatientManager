@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PatientMgmt.Core.Application;
 
 namespace PatientMgmt.Infrastructure.Persistence;
 
@@ -22,6 +23,7 @@ public static void AddPersistenceInfrastructure(this IServiceCollection services
     #endregion
 
     #region Repositories
+    services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
     #endregion
 }
 }

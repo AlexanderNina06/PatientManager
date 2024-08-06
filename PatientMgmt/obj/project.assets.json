@@ -8395,11 +8395,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\18297\\PatientManager\\PatientMgmt\\PatientMgmt.csproj",
+      "projectUniqueName": "c:\\Users\\18297\\PatientManager\\PatientMgmt\\PatientMgmt.csproj",
       "projectName": "PatientMgmt",
-      "projectPath": "C:\\Users\\18297\\PatientManager\\PatientMgmt\\PatientMgmt.csproj",
+      "projectPath": "c:\\Users\\18297\\PatientManager\\PatientMgmt\\PatientMgmt.csproj",
       "packagesPath": "C:\\Users\\18297\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\18297\\PatientManager\\PatientMgmt\\obj\\",
+      "outputPath": "c:\\Users\\18297\\PatientManager\\PatientMgmt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\18297\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8417,8 +8417,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {
-              "projectPath": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj"
+            "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {
+              "projectPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj"
             },
             "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj": {
               "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj"

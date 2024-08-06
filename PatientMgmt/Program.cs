@@ -3,6 +3,7 @@ using PatientMgmt.Infrastructure.Identity.Entities;
 using Microsoft.AspNetCore.Identity;
 using PatientMgmt.Infrastructure.Identity.Seeds;
 using PatientMgmt.Infrastructure.Identity;
+using PatientMgmt.Core.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSession();
 builder.Services.AddPersistenceInfrastructure(builder.Configuration);
 builder.Services.AddIdentityInfrastructure(builder.Configuration);
+builder.Services.AddApplicationLayer(builder.Configuration);
 
 var app = builder.Build();
 
