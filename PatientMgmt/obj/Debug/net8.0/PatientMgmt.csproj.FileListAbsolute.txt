@@ -301,6 +301,8 @@ C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\System.Xml.XmlSe
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\System.Xml.XPath.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\System.Xml.XPath.XDocument.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\WindowsBase.dll
+C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
@@ -574,5 +576,3 @@ C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\refint\PatientMgmt.dl
 C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\PatientMgmt.pdb
 C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\PatientMgmt.genruntimeconfig.cache
 C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\ref\PatientMgmt.dll
-C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\AutoMapper.dll
-C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
