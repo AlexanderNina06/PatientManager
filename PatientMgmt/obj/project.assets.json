@@ -8395,11 +8395,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\18297\\PatientManager\\PatientMgmt\\PatientMgmt.csproj",
+      "projectUniqueName": "C:\\Users\\18297\\PatientManager\\PatientMgmt\\PatientMgmt.csproj",
       "projectName": "PatientMgmt",
-      "projectPath": "c:\\Users\\18297\\PatientManager\\PatientMgmt\\PatientMgmt.csproj",
+      "projectPath": "C:\\Users\\18297\\PatientManager\\PatientMgmt\\PatientMgmt.csproj",
       "packagesPath": "C:\\Users\\18297\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\18297\\PatientManager\\PatientMgmt\\obj\\",
+      "outputPath": "C:\\Users\\18297\\PatientManager\\PatientMgmt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\18297\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8417,17 +8417,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {
-              "projectPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj"
+            "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {
+              "projectPath": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj"
             },
-            "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj": {
-              "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj"
+            "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj": {
+              "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj"
             },
-            "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj": {
-              "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj"
+            "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj": {
+              "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj"
             },
-            "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj": {
-              "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj"
+            "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj": {
+              "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj"
             }
           }
         }

@@ -10,7 +10,7 @@ namespace PatientMgmt.Infrastructure.Identity.Seeds
 		{
 			ApplicationUser defaultUser = new();
 			defaultUser.UserName = "AssistantUser";
-			defaultUser.Email = "fakeEmail@email.com";
+			defaultUser.Email = "assistantEmail@email.com";
 			defaultUser.FirstName = "John";
 			defaultUser.LastName = "Jones";
 			defaultUser.EmailConfirmed = true;

@@ -9,8 +9,8 @@ namespace PatientMgmt.Infrastructure.Identity.Seeds
 		public static async Task SeedAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
 		{
 			ApplicationUser defaultUser = new();
-			defaultUser.UserName = "SuperAdminUser";
-			defaultUser.Email = "SuperAdminUser@email.com";
+			defaultUser.UserName = "AdminUser";
+			defaultUser.Email = "Adminemail@email.com";
 			defaultUser.FirstName = "Carlos";
 			defaultUser.LastName = "Jones";
 			defaultUser.EmailConfirmed = true;
