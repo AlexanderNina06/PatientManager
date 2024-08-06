@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PatientMgmt.Infrastructure.Identity.Contexts;
 using PatientMgmt.Infrastructure.Identity.Entities;
+using PatientMgmt.Core.Application;
 
 namespace PatientMgmt.Infrastructure.Identity;
 
@@ -38,6 +39,10 @@ public static void AddIdentityInfrastructure(this IServiceCollection services,IC
 
     #endregion
 
+    #region Service
     
+    services.AddTransient<IAccountService, AccountService>();
+
+    #endregion
 }
 }
