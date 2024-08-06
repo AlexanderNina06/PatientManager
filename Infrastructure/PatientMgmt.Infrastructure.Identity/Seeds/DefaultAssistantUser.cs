@@ -4,7 +4,7 @@ using PatientMgmt.Core.Domain;
 
 namespace PatientMgmt.Infrastructure.Identity.Seeds
 {
-	public class DefaultAssistantUser
+	public static class DefaultAssistantUser
 	{
 		public static async Task SeedAsync(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
 		{
