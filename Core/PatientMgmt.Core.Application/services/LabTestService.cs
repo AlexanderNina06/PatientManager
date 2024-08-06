@@ -4,7 +4,7 @@ using PatientMgmt.Core.Domain;
 
 namespace PatientMgmt.Core.Application;
 
-public class LabTestService : GenericService<SaveLabTestViewModel, LabTestViewModel, LabTest>
+public class LabTestService : GenericService<SaveLabTestViewModel, LabTestViewModel, LabTest>, ILabTestService
 {
   private readonly ILabTestRepository _labTestRepository;
   private readonly IHttpContextAccessor _httpContextAccessor;
