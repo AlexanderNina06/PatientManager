@@ -1237,11 +1237,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {
-              "projectPath": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj"
+            "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {
+              "projectPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj"
             },
-            "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj": {
-              "projectPath": "C:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj"
+            "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj": {
+              "projectPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj"
             }
           }
         }

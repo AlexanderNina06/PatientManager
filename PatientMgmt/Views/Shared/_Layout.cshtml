@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor httpContext;
+@{
+    var User = httpContext.HttpContext.Session.Get<AuthenticationResponse>("user");
+    var isAdmin = User != null ? User.Roles.Any(r => r == "Admin") : false;
+    var isAssistant = User != null ? User.Roles.Any(r => r == "Assistant") : false;
+}
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
     <meta charset="utf-8" />
@@ -17,7 +23,7 @@
         
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" asp-controller="Home" asp-action="Index">
+                <a class="navbar-item" asp-controller="@(User != null? "Home" : "User")" asp-action="Index">
                 <i class="fa-solid fa-hospital-user fa-xl" style="color: #74C0FC;"></i> 
                 <span class="has-text-weight-bold is-size-6" style="font-family: Open Sans, sans-serif;">PatientNexus</span>                
                 </a>
@@ -27,30 +33,38 @@
 
                 <div class="navbar-start">
 
-                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Users</a>
+                    @if(User != null)
+                    {
+                        if(isAdmin)
+                        {
+                            <a class="navbar-item" asp-controller="Home" asp-action="Index">Users</a>
 
-                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Doctor</a>
-                    
-                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Patient</a>
+                            <a class="navbar-item" asp-controller="Doctor" asp-action="Index">Doctors</a>
+                            
+                            <a class="navbar-item" asp-controller="Home" asp-action="Index">Lab Test</a>
+                       
+                            <a class="navbar-item" asp-controller="Home" asp-action="Index">Patients</a>
 
-                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Lab Tests</a>
+                            <a class="navbar-item" asp-controller="Home" asp-action="Index">Test Results</a>
 
-                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Test Results</a>
+                            <a class="navbar-item" asp-controller="Home" asp-action="Index">Appointments</a>
+                        }
 
-                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Appointments</a>
-
+                    }
+                    else
+                    {
+                        <a class="navbar-item" asp-controller="Home" asp-action="Index">Register</a>
+                    }
                 </div>
-
+               
                 <div class="navbar-end">
                     <div class="navbar-item">
                         <div class="buttons">
-                            <a class="button is-light">
-                                Log Out
-                            </a>
+                            <a class="button is-light" asp-controller="User" asp-action="Index">Log Out</a>
                         </div>
                     </div>
                 </div>
-
+                
             </div>
         </nav>
 

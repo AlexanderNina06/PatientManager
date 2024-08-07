@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using PatientMgmt.Infrastructure.Identity.Seeds;
 using PatientMgmt.Infrastructure.Identity;
 using PatientMgmt.Core.Application;
+using PatientMgmt.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,9 @@ builder.Services.AddSession();
 builder.Services.AddPersistenceInfrastructure(builder.Configuration);
 builder.Services.AddIdentityInfrastructure(builder.Configuration);
 builder.Services.AddApplicationLayer(builder.Configuration);
+builder.Services.AddScoped<LoginAuthorize>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+builder.Services.AddTransient<ValidateUserSession, ValidateUserSession>();
 
 var app = builder.Build();
 
@@ -54,6 +58,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=User}/{action=Index}/{id?}");
 
 app.Run();
