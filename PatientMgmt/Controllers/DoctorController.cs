@@ -1,13 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
+using PatientMgmt.Core.Application;
 
 namespace PatientMgmt.Controllers
 {
     public class DoctorController : Controller
     {
-        // GET: DoctorController
-        public ActionResult Index()
+        private readonly IDoctorService _doctorService;
+
+        public DoctorController(IDoctorService doctorService)
         {
-            return View();
+            _doctorService = doctorService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await _doctorService.GetAll());
         }
 
     }

@@ -31,39 +31,33 @@
 
             <div id="navbarBasicExample" class="navbar-menu">
 
-                <div class="navbar-start">
-
-                    @if(User != null)
+                @if(User != null)
+                {   
+                   @if(isAdmin)
                     {
-                        if(isAdmin)
-                        {
+                        <div class="navbar-start">
                             <a class="navbar-item" asp-controller="Home" asp-action="Index">Users</a>
 
-                            <a class="navbar-item" asp-controller="Doctor" asp-action="Index">Doctors</a>
+                                    <a class="navbar-item" asp-controller="Doctor" asp-action="Index">Doctors</a>
+                                    
+                                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Lab Test</a>
                             
-                            <a class="navbar-item" asp-controller="Home" asp-action="Index">Lab Test</a>
-                       
-                            <a class="navbar-item" asp-controller="Home" asp-action="Index">Patients</a>
+                                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Patients</a>
 
-                            <a class="navbar-item" asp-controller="Home" asp-action="Index">Test Results</a>
+                                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Test Results</a>
 
-                            <a class="navbar-item" asp-controller="Home" asp-action="Index">Appointments</a>
-                        }
-
-                    }
-                    else
-                    {
-                        <a class="navbar-item" asp-controller="Home" asp-action="Index">Register</a>
-                    }
-                </div>
-               
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a class="button is-light" asp-controller="User" asp-action="Index">Log Out</a>
+                                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Appointments</a>                            
+                      </div>
+                    
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <div class="buttons">
+                                    <a class="button is-light" asp-controller="User" asp-action="LogOut">Log Out</a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    }
+                }
                 
             </div>
         </nav>

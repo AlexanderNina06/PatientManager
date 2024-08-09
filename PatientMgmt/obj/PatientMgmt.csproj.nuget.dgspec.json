@@ -164,14 +164,14 @@
         }
       }
     },
-    "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj": {
+    "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj",
+        "projectUniqueName": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj",
         "projectName": "PatientMgmt.Infrastructure.Identity",
-        "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj",
+        "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj",
         "packagesPath": "C:\\Users\\18297\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\obj\\",
+        "outputPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\18297\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -459,8 +459,8 @@
               "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj": {
                 "projectPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Application\\PatientMgmt.Core.Application.csproj"
               },
-              "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj": {
-                "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj"
+              "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj": {
+                "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Identity\\PatientMgmt.Infrastructure.Identity.csproj"
               },
               "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj": {
                 "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj"
