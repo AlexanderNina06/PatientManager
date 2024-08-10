@@ -3,8 +3,14 @@
     ViewData["Title"] = "Doctors";
 }
 
-<section data-section-id="1" data-share="" data-category="ta-content" data-component-id="eb4ba9ec_08_awz" class="section" data-path="0">
+<section class="section">
+
         <div class="container">
+            
+            <div class="buttons is-right">
+                <a class="button is-primary is-outlined is-responsive">Add new Doctor</a>
+            </div>
+
             @if(Model == null || Model.Count == 0)
             {
                 <h3>No Doctors available</h3>

@@ -13827,6 +13827,16 @@ label.panel-block:hover {
   --bulma-section-padding-large: 18rem 6rem;
   padding: var(--bulma-section-padding);
 }
+.custom-outlined-button {
+  border: 1px solid rgb(178, 177, 191);
+  color: rgb(178, 177, 191);
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
 @media screen and (min-width: 1024px) {
   .section {
     padding: var(--bulma-section-padding-desktop);
