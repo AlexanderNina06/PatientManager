@@ -17,6 +17,11 @@
     <PackageReference Include="NuGet.Common" Version="6.10.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
+    <Folder Include="wwwroot\Images\Doctors\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
