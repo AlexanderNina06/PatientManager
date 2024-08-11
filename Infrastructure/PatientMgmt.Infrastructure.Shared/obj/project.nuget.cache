@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i5LlUHMWo6U=",
+  "dgSpecHash": "qz8F0i5ctTI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
+  "projectFilePath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\18297\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\18297\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

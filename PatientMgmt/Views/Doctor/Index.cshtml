@@ -13,13 +13,13 @@
 
             @if(Model == null || Model.Count == 0)
             {
-                <h3>No Doctors available</h3>
+                <h3 class="content has-text-centered title is-size-6">No Doctors available.</h3>
             }
            <div class="columns is-multiline">
                 @foreach(DoctorViewModel item in Model){
-                    <div class="column is-3-desktop is-6-tablet">
+                    <div class="column is-4-desktop is-6-tablet">
                         <div class="card">
-                            <div class="card-image is-relative" data-path="0.0.0.0.0.0">
+                            <div class="card-image is-relative">
                                  <img class="image is-64x64 is-absolute is-bottom-0" style="left: 50%; transform: translate(-50%, 50%); border-radius: 100% !important;" src="@item.Picture" alt="alt" data-config-id="profile1">
                             </div>
                             <div class="card-content mt-4">
@@ -30,19 +30,19 @@
                                 <div class="content">
                                     <div class="is-flex is-justify-content-center is-align-items-center">
                                     <i class="fa-regular fa-envelope mr-2" style="color: #74C0FC; width="18" height="14" viewBox="0 0 18 14" fill="none"></i>
-                                    <p class="is-size-6" data-config-id="email1">@item.Email</p>
+                                    <p class="is-size-6" data-config-id="email1"><span class="has-text-weight-semibold">Email: </span>@item.Email</p>
                                     </div>
                                 </div>
                                 <div class="content">
                                     <div class="is-flex is-justify-content-center is-align-items-center">
                                     <i class="fa-solid fa-phone mr-2" style="color: #74C0FC; width="18" height="14" viewBox="0 0 18 14" fill="none"></i>
-                                    <p class="is-size-6"> @item.Phone</p>
+                                    <p class="is-size-6"><span class="has-text-weight-semibold">Phone: </span>@item.Phone</p>
                                     </div>
                                 </div>
                                 <div class="content">
                                     <div class="is-flex is-justify-content-center is-align-items-center">
                                     <i class="fa-regular fa-id-card mr-2" style="color: #74C0FC; width="18" height="14" viewBox="0 0 18 14" fill="none"></i>
-                                    <p class="is-size-6"> @item.IdCard</p>
+                                    <p class="is-size-6"><span class="has-text-weight-semibold">Id: </span>@item.IdCard</p>
                                     </div>
                                 </div>
                             </div>

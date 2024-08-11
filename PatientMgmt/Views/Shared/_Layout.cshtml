@@ -40,22 +40,49 @@
 
                                     <a class="navbar-item" asp-controller="Doctor" asp-action="Index">Doctors</a>
                                     
-                                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Lab Test</a>
+                                    <a class="navbar-item" asp-controller="LabTest" asp-action="Index">Lab Test</a>
                             
-                                    <a class="navbar-item" asp-controller="Home" asp-action="Index">Patients</a>
+                                    <a class="navbar-item" asp-controller="Patient" asp-action="Index">Patients</a>
 
                                     <a class="navbar-item" asp-controller="Home" asp-action="Index">Test Results</a>
 
                                     <a class="navbar-item" asp-controller="Home" asp-action="Index">Appointments</a>                            
                       </div>
                     
-                        <div class="navbar-end">
-                            <div class="navbar-item">
-                                <div class="buttons">
-                                    <a class="button is-light" asp-controller="User" asp-action="LogOut">Log Out</a>
+                        @if (isAdmin)
+                        {
+                            <div class="navbar-end">
+                                <div class="navbar-item">
+                                    <div class="icon-text">
+                                        <span class="icon has-text-info">
+                                            <i class="fa-solid fa-user" style="color: #abb1bf;"></i>
+                                        </span>
+                                        <span class="is-size-6 has-text-grey-light mr-4">(Administrator)</span>
+                                    </div>
+                                   
+                                    <div class="buttons">
+                                        <a class="button is-light" asp-controller="User" asp-action="LogOut">Log Out</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        }
+                        else if (isAssistant)
+                        {
+                            <div class="navbar-end">
+                                <div class="navbar-item">
+                                    <div class="icon-text">
+                                        <span class="icon has-text-info">
+                                            <i class="fa-solid fa-user" style="color: #abb1bf;"></i>
+                                        </span>
+                                        <span class="is-size-6 has-text-grey-light mr-4">(Assistant)</span>
+                                    </div>
+
+                                    <div class="buttons">
+                                        <a class="button is-light" asp-controller="User" asp-action="LogOut">Log Out</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
                     }
                 }
                 

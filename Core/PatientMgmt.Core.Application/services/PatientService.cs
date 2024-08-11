@@ -47,7 +47,8 @@ public class PatientService : GenericService<SavePatientViewModel, PatientViewMo
         Phone = patient.Phone,
         hasAllergies = patient.hasAllergies,
         isSmoker = patient.isSmoker,
-        Direction = patient.Direction
+        Direction = patient.Direction,
+        DateOfBirth = patient.DateOfBirth
 
       }).ToList();
     }

@@ -195,8 +195,8 @@
               "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj": {
                 "projectPath": "c:\\Users\\18297\\PatientManager\\Core\\PatientMgmt.Core.Domain\\PatientMgmt.Core.Domain.csproj"
               },
-              "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj": {
-                "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj"
+              "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj": {
+                "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj"
               }
             }
           }
@@ -363,14 +363,14 @@
         }
       }
     },
-    "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj": {
+    "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
+        "projectUniqueName": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
         "projectName": "PatientMgmt.Infrastructure.Shared",
-        "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
+        "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
         "packagesPath": "C:\\Users\\18297\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\obj\\",
+        "outputPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\18297\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -465,8 +465,8 @@
               "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj": {
                 "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj"
               },
-              "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj": {
-                "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj"
+              "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj": {
+                "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj"
               }
             }
           }
