@@ -1,0 +1,120 @@
+﻿@model SavePatientViewModel
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+    ViewData["Title"] = "Save Patient";
+}
+<section>
+    <div class="container">
+        <div class="columns is-centered mt-5">
+            <div class="column is-7">
+                <div class="box">
+
+                        <form method="post" enctype="multipart/form-data" asp-controller="Patient" asp-action="@(editMode ? "Edit":"Create")">
+
+                            <div class="field">
+                                <label asp-for="Name" class="label">First Name</label>
+                                <div class="control">
+                                <input asp-for="Name" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="LastName" class="label">Last Name</label>
+                                <div class="control">
+                                <input asp-for="LastName" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="Phone" class="label">Phone</label>
+                                <div class="control">
+                                <input asp-for="Phone" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="IdCard" class="label">Id</label>
+                                <div class="control">
+                                <input asp-for="IdCard" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="IdCard" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="Direction" class="label">Direction</label>
+                                <div class="control">
+                                <input asp-for="Direction" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="Direction" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="DateOfBirth" class="label">Date of Birth</label>
+                                <div class="control">
+                                <input asp-for="DateOfBirth" class="input" type="date" />
+                                </div>
+                                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="isSmoker" class="label">Is a Smoker</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select asp-for="isSmoker" class="dropdown-content">
+                                            <option value="true">Yes</option>
+                                            <option value="false">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="hasAllergies" class="label">Have Allergies</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select asp-for="hasAllergies" class="dropdown-content">
+                                            <option value="true">Yes</option>
+                                            <option value="false">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="field">
+                               <label asp-for="PictureFile" class="form-label">Choose a file: </label>
+                                @if (editMode)
+                                {
+                                <input  asp-for="PictureFile" class="form-control" />
+                                }
+                                else
+                                {
+                                <input Required asp-for="PictureFile" class="form-control" />
+                                }
+                            </div>
+
+                            <input type="hidden" asp-for="Id" />
+
+                            <div class="field is-grouped is-grouped-centered">
+                                <p class="control">
+                                    <button type="submit" class="button is-primary">
+                                    Submit
+                                    </button>
+                                </p>
+                                <p class="control">
+                                    <a  asp-controller="Patient" asp-action="Index" class="button is-light">
+                                    Cancel
+                                    </a>
+                                </p>
+                            </div
+
+                        </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
