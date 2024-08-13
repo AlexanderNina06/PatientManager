@@ -1,0 +1,76 @@
+﻿@model SaveAppointmentViewModel
+@{
+    bool editMode = Model.Id == 0 ? false : true;
+    ViewData["Title"] = "Appointments";
+}
+<section>
+    <div class="container">
+        <div class="columns is-centered mt-5">
+            <div class="column is-7">
+                <div class="box">
+
+                        <form method="post" enctype="multipart/form-data" asp-controller="Appointment" asp-action="@(editMode ? "Edit":"Create")">
+
+                            <div class="field">
+                                <label asp-for="PatientId" class="label">Patient</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select asp-for="PatientId" asp-items="@(new SelectList(Model.Patients,"Id","Name"))" class="dropdown-content">
+                                            <option value="0">Select a patient</option>
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="DoctorId" class="label">Doctor</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select asp-for="DoctorId" asp-items="@(new SelectList(Model.Doctors,"Id","Name"))" class="dropdown-content">
+                                            <option value="0">Select a Doctor</option>
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="AppointmentDateTime" class="label">Appointment date</label>
+                                <div class="control">
+                                <input asp-for="AppointmentDateTime" class="input" type="datetime"/>
+                                </div>
+                                <span asp-validation-for="AppointmentDateTime" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="Cause" class="label">Cause</label>
+                                <div class="control">
+                                <input asp-for="Cause" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="Cause" class="text-danger"></span>
+                            </div>
+
+
+                            <input type="hidden" asp-for="Id" />
+
+                            <div class="field is-grouped is-grouped-centered">
+                                <p class="control">
+                                    <button type="submit" class="button is-primary">
+                                    Submit
+                                    </button>
+                                </p>
+                                <p class="control">
+                                    <a  asp-controller="Patient" asp-action="Index" class="button is-light">
+                                    Cancel
+                                    </a>
+                                </p>
+                            </div
+
+                        </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
