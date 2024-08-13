@@ -73,6 +73,19 @@ CreateMap<Appointment,AppointmentViewModel>()
 .ForMember(dest => dest.TestResults, opt => opt.Ignore())
 .ForMember(dest => dest.patient, opt => opt.Ignore());
 
+CreateMap<Appointment,SaveAppointmentViewModel>()
+.ForMember(dest => dest.Doctors, opt => opt.Ignore())
+.ForMember(dest => dest.Patients, opt => opt.Ignore())
+.ReverseMap()
+.ForMember(dest => dest.Created, opt => opt.Ignore())
+.ForMember(dest => dest.CreatedBy, opt => opt.Ignore())
+.ForMember(dest => dest.LastModified, opt => opt.Ignore())
+.ForMember(dest => dest.LastModifiedBy, opt => opt.Ignore())
+.ForMember(dest => dest.doctor, opt => opt.Ignore())
+.ForMember(dest => dest.tests, opt => opt.Ignore())
+.ForMember(dest => dest.TestResults, opt => opt.Ignore())
+.ForMember(dest => dest.patient, opt => opt.Ignore());
+
 // TestResults Mappings
 CreateMap<TestResult,TestResultsViewModel>()
 .ForMember(dest => dest.PatientName, opt => opt.MapFrom(src => $"{src.patient.Name} {src.patient.LastName}"))

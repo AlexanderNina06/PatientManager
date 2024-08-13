@@ -55,6 +55,10 @@ namespace PatientMgmt.Infrastructure.Persistence.Migrations
                     b.Property<int>("PatientId")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("appointmentStatus")
                         .HasColumnType("int");
 

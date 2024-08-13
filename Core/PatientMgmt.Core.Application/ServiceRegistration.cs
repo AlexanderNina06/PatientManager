@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PatientMgmt.Core.Application.Interfaces.Services;
+using PatientMgmt.Core.Application.services;
 using PatientMgmt.Core.Domain;
 
 namespace PatientMgmt.Core.Application;
@@ -16,6 +18,8 @@ public static void AddApplicationLayer(this IServiceCollection services, IConfig
     services.AddTransient<IPatientService, PatientService>();
     services.AddTransient<ILabTestService, LabTestService>();
     services.AddTransient<IUserService, UserService>();
+    services.AddTransient<IAppointmentService, AppointmentService>();
+
     #endregion
 }
 }

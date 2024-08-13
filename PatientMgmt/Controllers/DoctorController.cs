@@ -51,6 +51,8 @@ namespace PatientMgmt.Controllers
             {
                 return View("SaveDoctor", vm);
             }
+            /*SaveDoctorViewModel doctorVm = await _doctorService.GetByIdSaveViewModel(vm.Id);
+            vm.Picture = UploadFile(vm.PictureFile, vm.Id, true, doctorVm.Picture);*/
 
             await _doctorService.Update(vm, vm.Id);
             return RedirectToRoute(new { controller = "Doctor", action = "Index" });

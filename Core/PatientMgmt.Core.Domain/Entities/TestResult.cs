@@ -1,9 +1,11 @@
-﻿namespace PatientMgmt.Core.Domain;
+﻿using PatientMgmt.Core.Domain.Enums;
+
+namespace PatientMgmt.Core.Domain;
 
 public class TestResult : AuditableBaseEntity
 {
 public string Result { get; set; }
-public ApptAndResultStatus ResultStatus { get; set; }
+public ResultStatus ResultStatus { get; set; }
 
 //Navegation Properties
 public int PatientId { get; set;}

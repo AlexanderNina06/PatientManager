@@ -13,8 +13,8 @@ public string Cause {get; set; }
 public string appointmentStatus{ get; set; }
 
 //ignore the following in the Mapping
-public string TestFinalResults  { get; set; }
-public string TestResultState  { get; set; }
-public ICollection<string> TestsNames { get; set; }
+public string? TestFinalResults  { get; set; }
+public string? TestResultState  { get; set; }
+public ICollection<LabTestViewModel>? TestsNames { get; set; }
 
 }

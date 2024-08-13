@@ -2,6 +2,8 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PatientMgmt.Core.Application;
+using PatientMgmt.Core.Application.Interfaces.Repositories;
+using PatientMgmt.Infrastructure.Persistence.Repository;
 
 namespace PatientMgmt.Infrastructure.Persistence;
 
@@ -27,6 +29,8 @@ public static void AddPersistenceInfrastructure(this IServiceCollection services
     services.AddTransient<IDoctorRepository, DoctorRepository>();
     services.AddTransient<IPatientRepository, PatientRepository>();
     services.AddTransient<ILabTestRepository, LabTestRepository>();
+    services.AddTransient<IAppointmentRepository, AppointmentRepository>();
+
     #endregion
 }
 }
