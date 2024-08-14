@@ -1,0 +1,54 @@
+﻿@using PatientMgmt.Core.Application.ViewModels.Appointments
+@model AssignLabTestsViewModel
+@{
+    ViewData["Title"] = "Assign Lab Tests";
+}
+<section>
+    <div class="container">
+        <div class="columns is-centered mt-5">
+            <div class="column is-7">
+                <div class="box">
+
+                    <form asp-controller="Appointment" asp-action="AssignLabTests" method="post">
+
+                        <input type="hidden" asp-for="AppointmentId" />
+
+                        <div>
+                            
+                        <div class="is-flex is-justify-content-center is-align-items-center mb-4">
+                            <h4 class="is-size-5 has-text-weight-medium">Select Lab tests for this appointment</h4>
+                        </div>
+
+                            <div class="checkboxes  ml-6">
+                                @foreach (var labTest in Model.LabTests)
+                                {
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="SelectedLabTestIds" value="@labTest.Id"
+                                            @(Model.SelectedLabTestIds.Contains(labTest.Id) ? "checked" : "") />
+                                        @labTest.TestName
+                                    </label>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="field is-grouped is-grouped-centered mt-4">
+
+                                <p class="control">
+                                    <button type="submit" class="button is-primary">
+                                    Submit lab tests request
+                                    </button>
+                                </p>
+                                <p class="control">
+                                    <a  asp-controller="Appointment" asp-action="Index" class="button is-light">
+                                    Cancel
+                                    </a>
+                                </p>
+                        </div
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

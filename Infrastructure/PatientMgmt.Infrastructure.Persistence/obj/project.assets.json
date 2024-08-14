@@ -4248,11 +4248,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj",
+      "projectUniqueName": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj",
       "projectName": "PatientMgmt.Infrastructure.Persistence",
-      "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj",
+      "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\PatientMgmt.Infrastructure.Persistence.csproj",
       "packagesPath": "C:\\Users\\18297\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\obj\\",
+      "outputPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\18297\\AppData\\Roaming\\NuGet\\NuGet.Config",

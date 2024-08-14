@@ -67,8 +67,14 @@
                                 
                                 @if(item.appointmentStatus != null && item.appointmentStatus == ApptStatus.pendingAppointment.ToString())
                                 {
-                                <a class="button is-fullwidth has-text-grey-light is-uppercase js-modal-trigger" style="border: none;" data-config-id="primary-action1">
+                                <a asp-controller="Appointment" asp-action="AssignLabTests" asp-route-id="@item.Id" class="button is-fullwidth has-text-grey-light is-uppercase" style="border: none;" data-config-id="primary-action1">
                                     Consult
+                                </a>
+                                }
+                                @if(item.appointmentStatus != null && item.appointmentStatus == ApptStatus.pendingResults.ToString())
+                                {
+                                <a asp-controller="Appointment" asp-action="ConsultResults" asp-route-id="@item.Id" class="button is-fullwidth has-text-grey-light is-uppercase js-modal-trigger" data-target="modal-js-example" style="border: none;" data-config-id="primary-action1">
+                                    Consult Results
                                 </a>
                                 }
 

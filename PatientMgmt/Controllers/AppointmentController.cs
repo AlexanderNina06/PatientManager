@@ -1,6 +1,8 @@
+using AutoMapper.Internal.Mappers;
 using Microsoft.AspNetCore.Mvc;
 using PatientMgmt.Core.Application;
 using PatientMgmt.Core.Application.Interfaces.Services;
+using PatientMgmt.Core.Application.ViewModels.Appointments;
 
 namespace PatientMgmt.Controllers
 {
@@ -9,11 +11,13 @@ namespace PatientMgmt.Controllers
         private readonly IAppointmentService _appointmentService;
         private readonly IPatientService _patientService;
         private readonly IDoctorService _doctorService;
-        public AppointmentController(IAppointmentService appointmentService, IPatientService patientService, IDoctorService doctorService)
+        private readonly ILabTestService _labTestService;
+        public AppointmentController(IAppointmentService appointmentService, IPatientService patientService, IDoctorService doctorService, ILabTestService labTestService)
         {
             _appointmentService = appointmentService;
             _patientService = patientService;
             _doctorService = doctorService;
+            _labTestService = labTestService;
         }
 
         public async Task<ActionResult> Index()
@@ -71,6 +75,33 @@ namespace PatientMgmt.Controllers
         {
             
             await _appointmentService.Delete(id);
+            return RedirectToRoute(new { controller = "Appointment", action = "Index" });
+        }
+
+        public async Task<IActionResult> AssignLabTests(int id)
+        {
+            var appointment = await _appointmentService.GetByIdSaveViewModel(id);
+            if(appointment == null){
+                return NotFound();
+            }
+
+            AssignLabTestsViewModel vm = new();
+            vm.SelectedLabTestIds = new List<int>();
+            vm.LabTests = await _labTestService.GetAll();
+            vm.AppointmentId = id;
+
+            return View("AssignLabTests", vm);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AssignLabTests(AssignLabTestsViewModel vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+
+            await _appointmentService.AssignLabTestsToAppointment(vm.AppointmentId, vm.SelectedLabTestIds); 
             return RedirectToRoute(new { controller = "Appointment", action = "Index" });
         }
 

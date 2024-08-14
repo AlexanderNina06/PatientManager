@@ -30,6 +30,7 @@ public static void AddPersistenceInfrastructure(this IServiceCollection services
     services.AddTransient<IPatientRepository, PatientRepository>();
     services.AddTransient<ILabTestRepository, LabTestRepository>();
     services.AddTransient<IAppointmentRepository, AppointmentRepository>();
+    services.AddTransient<ITestResultRepository, TestResultRepository>();
 
     #endregion
 }

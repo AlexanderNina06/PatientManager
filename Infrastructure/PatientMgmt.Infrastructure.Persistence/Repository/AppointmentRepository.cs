@@ -13,6 +13,11 @@ public class AppointmentRepository : GenericRepository<Appointment>, IAppointmen
       _db = context;
     }
 
+    public Task AssignLabTestsToAppointment(int appointmentId, List<int> labTestIds)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<List<Appointment>> GetAllWithIncludeAsync(List<string> properties)
     {
         var query = _db.Set<Appointment>().AsQueryable();

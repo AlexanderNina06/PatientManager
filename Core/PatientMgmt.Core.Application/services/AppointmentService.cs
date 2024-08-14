@@ -4,21 +4,24 @@ using Microsoft.AspNetCore.Http;
 using PatientMgmt.Core.Application.Interfaces.Repositories;
 using PatientMgmt.Core.Application.Interfaces.Services;
 using PatientMgmt.Core.Domain;
+using PatientMgmt.Core.Domain.Enums;
 
 namespace PatientMgmt.Core.Application.services;
 
 public class AppointmentService : GenericService<SaveAppointmentViewModel, AppointmentViewModel, Appointment>, IAppointmentService
 {
   private readonly IAppointmentRepository _AppointmentRepository;
+  private readonly ITestResultRepository _testResultRepository;
   private readonly IHttpContextAccessor _HttpContextAccessor;
   private readonly AuthenticationResponse userViewModel;
   private readonly IMapper _mapper;
-    public AppointmentService(IAppointmentRepository appointmentRepository, IMapper mapper, IHttpContextAccessor HttpContextAccessor) : base(appointmentRepository, mapper)
+    public AppointmentService(IAppointmentRepository appointmentRepository, IMapper mapper, IHttpContextAccessor HttpContextAccessor, ITestResultRepository testResultRepository) : base(appointmentRepository, mapper)
     {
       _AppointmentRepository = appointmentRepository;
       _HttpContextAccessor =  HttpContextAccessor;
       userViewModel = _HttpContextAccessor.HttpContext.Session.Get<AuthenticationResponse>("user");
       _mapper = mapper;
+      _testResultRepository = testResultRepository;
     }
 
     public override async Task<SaveAppointmentViewModel> Add(SaveAppointmentViewModel vm)
@@ -27,6 +30,32 @@ public class AppointmentService : GenericService<SaveAppointmentViewModel, Appoi
 
       return await base.Add(vm);
     }
+    
+    public async Task AssignLabTestsToAppointment(int appointmentId, List<int> labTestIds)
+    {
+      var appointment = await _AppointmentRepository.GetByIdAsync(appointmentId);
+      if (appointment == null)
+      {
+        throw new Exception("Appointment not found");
+      }
+
+      foreach (var labTestId in labTestIds)
+      {
+        var testResult = new TestResult
+        {
+          AppointmentIdFK = appointmentId,
+          LabTestId = labTestId,
+          ResultStatus = ResultStatus.pending,
+          Result = null,
+          UserId = userViewModel.Id
+        };
+          await _testResultRepository.AddAsync(testResult);
+
+          appointment.appointmentStatus = ApptStatus.pendingResults;
+          await _AppointmentRepository.UpdateAsync(appointment, appointmentId);
+      }
+    }
+
     public override async Task Update(SaveAppointmentViewModel vm, int id)
     {
         vm.UserId = userViewModel.Id;

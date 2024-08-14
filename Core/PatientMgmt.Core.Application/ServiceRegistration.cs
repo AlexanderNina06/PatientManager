@@ -19,6 +19,7 @@ public static void AddApplicationLayer(this IServiceCollection services, IConfig
     services.AddTransient<ILabTestService, LabTestService>();
     services.AddTransient<IUserService, UserService>();
     services.AddTransient<IAppointmentService, AppointmentService>();
+    services.AddTransient<ITestResultService, TestResultService>();
 
     #endregion
 }

@@ -92,9 +92,15 @@ public override Task<int> SaveChangesAsync(CancellationToken cancellationToken =
         .OnDelete(DeleteBehavior.Restrict);
         
         modelBuilder.Entity<TestResult>()
-        .HasOne(tr => tr.Appointment)
-        .WithMany(a => a.TestResults)
-        .HasForeignKey(tr => tr.AppointmentId)
+        .HasOne<Appointment>(p => p.Appointment)
+        .WithMany()
+        .HasForeignKey(p => p.AppointmentIdFK)
+        .OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<TestResult>()
+        .HasOne<LabTest>(p => p.LabTest)
+        .WithMany()
+        .HasForeignKey(p => p.LabTestId)
         .OnDelete(DeleteBehavior.Restrict);
 
         #endregion

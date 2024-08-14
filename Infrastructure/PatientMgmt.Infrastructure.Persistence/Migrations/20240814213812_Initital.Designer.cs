@@ -12,8 +12,8 @@ using PatientMgmt.Infrastructure.Persistence;
 namespace PatientMgmt.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240812161915_AddNewProperty")]
-    partial class AddNewProperty
+    [Migration("20240814213812_Initital")]
+    partial class Initital
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -221,7 +221,10 @@ namespace PatientMgmt.Infrastructure.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AppointmentId")
+                    b.Property<int?>("AppointmentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AppointmentIdFK")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("Created")
@@ -230,27 +233,32 @@ namespace PatientMgmt.Infrastructure.Persistence.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("LabTestId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("LastModified")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastModifiedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PatientId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Result")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ResultStatus")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AppointmentId");
 
-                    b.HasIndex("PatientId");
+                    b.HasIndex("AppointmentIdFK");
+
+                    b.HasIndex("LabTestId");
 
                     b.ToTable("LabResults", (string)null);
                 });
@@ -283,21 +291,25 @@ namespace PatientMgmt.Infrastructure.Persistence.Migrations
 
             modelBuilder.Entity("PatientMgmt.Core.Domain.TestResult", b =>
                 {
-                    b.HasOne("PatientMgmt.Core.Domain.Appointment", "Appointment")
+                    b.HasOne("PatientMgmt.Core.Domain.Appointment", null)
                         .WithMany("TestResults")
-                        .HasForeignKey("AppointmentId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .HasForeignKey("AppointmentId");
+
+                    b.HasOne("PatientMgmt.Core.Domain.Appointment", "Appointment")
+                        .WithMany()
+                        .HasForeignKey("AppointmentIdFK")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PatientMgmt.Core.Domain.Patient", "patient")
+                    b.HasOne("PatientMgmt.Core.Domain.LabTest", "LabTest")
                         .WithMany()
-                        .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .HasForeignKey("LabTestId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Appointment");
 
-                    b.Navigation("patient");
+                    b.Navigation("LabTest");
                 });
 
             modelBuilder.Entity("PatientMgmt.Core.Domain.Appointment", b =>
