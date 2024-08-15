@@ -1,4 +1,5 @@
 using System;
+using Microsoft.EntityFrameworkCore;
 using PatientMgmt.Core.Application.Interfaces.Repositories;
 using PatientMgmt.Core.Domain;
 
@@ -10,5 +11,13 @@ public class TestResultRepository : GenericRepository<TestResult>, ITestResultRe
     public TestResultRepository(ApplicationContext context) : base(context)
     {
       _db = context;
+    }
+
+    public async Task<List<TestResult>> GetResultState(int appointmentId)
+    {
+      return await _db.Set<TestResult>()
+      .Where(tr => tr.AppointmentIdFK == appointmentId)
+      .Include(tr => tr.LabTest)
+      .ToListAsync();
     }
 }

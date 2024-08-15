@@ -105,5 +105,38 @@ namespace PatientMgmt.Controllers
             return RedirectToRoute(new { controller = "Appointment", action = "Index" });
         }
 
+        public async Task<IActionResult> ConsultResultStatus(int id)
+        {
+            var appointment = await _appointmentService.GetByIdSaveViewModel(id);
+            if(appointment == null){
+                return NotFound();
+            }
+
+            var resultVm = await _appointmentService.ConsutResults(id);
+            ViewBag.AppointmentId = id;  
+            
+            return View("ConsultResultStatus", resultVm);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CompleteAppt(int AppointmentId)
+        {
+            await _appointmentService.CompleteAppt(AppointmentId);
+            return RedirectToRoute(new { controller = "Appointment", action = "Index" });
+        }
+
+        public async Task<IActionResult> ConsultCompletedAppts(int id)
+        {
+            var appointment = await _appointmentService.GetByIdSaveViewModel(id);
+            if(appointment == null){
+                return NotFound();
+            }
+
+            var resultVm = await _appointmentService.ConsutResults(id);
+            ViewBag.AppointmentId = id;  
+        
+            return View("ConsultResultStatus", resultVm);
+        }
+
     }
 }

@@ -52,7 +52,13 @@
 
                                 <div class="content">
                                     <div class="is-flex is-justify-content-center is-align-items-center">
+                                    @if(item.appointmentStatus != null && item.appointmentStatus == ApptStatus.pendingAppointment.ToString() || item.appointmentStatus == ApptStatus.pendingResults.ToString())
+                                    {
                                     <i class="fa-regular fa-clock mr-2" style="color: #ff8f0f; width="18" height="14" viewBox="0 0 18 14" fill="none"></i>
+                                    }else if(item.appointmentStatus != null && item.appointmentStatus == ApptStatus.completed.ToString())
+                                    {
+                                    <i class="fa-regular fa-circle-check mr-2" style="color: #63E6BE; width="18" height="14" viewBox="0 0 18 14" fill="none"></i>
+                                    }
                                     <p class="is-size-6"><span class="has-text-weight-semibold"> Status: </span>@item.appointmentStatus</p>
                                     </div>
                                 </div>
@@ -73,8 +79,14 @@
                                 }
                                 @if(item.appointmentStatus != null && item.appointmentStatus == ApptStatus.pendingResults.ToString())
                                 {
-                                <a asp-controller="Appointment" asp-action="ConsultResults" asp-route-id="@item.Id" class="button is-fullwidth has-text-grey-light is-uppercase js-modal-trigger" data-target="modal-js-example" style="border: none;" data-config-id="primary-action1">
+                                <a asp-controller="Appointment" asp-action="ConsultResultStatus" asp-route-id="@item.Id"  class="button is-fullwidth has-text-grey-light is-uppercase js-modal-trigger" data-target="modal-js-example" style="border: none;" data-config-id="primary-action1">
                                     Consult Results
+                                </a>
+                                }
+                                @if(item.appointmentStatus == ApptStatus.completed.ToString())
+                                {
+                                <a asp-controller="Appointment" asp-action="ConsultResultStatus" asp-route-id="@item.Id"  class="button is-fullwidth has-text-grey-light is-uppercase js-modal-trigger" data-target="modal-js-example" style="border: none;" data-config-id="primary-action1">
+                                    See Results
                                 </a>
                                 }
 

@@ -1,8 +1,11 @@
 using System;
+using System.ComponentModel;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.VisualBasic;
 using PatientMgmt.Core.Application.Interfaces.Repositories;
 using PatientMgmt.Core.Application.Interfaces.Services;
+using PatientMgmt.Core.Application.ViewModels.TestResults;
 using PatientMgmt.Core.Domain;
 using PatientMgmt.Core.Domain.Enums;
 
@@ -54,6 +57,39 @@ public class AppointmentService : GenericService<SaveAppointmentViewModel, Appoi
           appointment.appointmentStatus = ApptStatus.pendingResults;
           await _AppointmentRepository.UpdateAsync(appointment, appointmentId);
       }
+    }
+
+    public async Task<List<ConsultResultsViewModel>> ConsutResults(int appointmentId)
+    {
+      var appointment = await _AppointmentRepository.GetByIdAsync(appointmentId);
+      if (appointment == null)
+      {
+        throw new Exception("Appointment not found");
+      }
+      
+      var testResultList = await _testResultRepository.GetResultState(appointment.Id);
+
+      return testResultList.Select(tr => new ConsultResultsViewModel
+      {
+          ResultStatus = tr.ResultStatus.ToString(),
+          LabTestId = tr.LabTestId,
+          TestName = tr.LabTest?.TestName,
+          Results = tr.Result,
+          IsAppointmentCompleted = tr.Appointment.appointmentStatus == ApptStatus.completed
+
+      }).ToList();
+    }
+
+    public async Task CompleteAppt(int appointmentId)
+    {
+        var appointment = await _AppointmentRepository.GetByIdAsync(appointmentId);
+        if (appointment == null)
+      {
+        throw new Exception("Appointment not found");
+      }
+
+      appointment.appointmentStatus = ApptStatus.completed;
+      await _AppointmentRepository.UpdateAsync(appointment, appointmentId);
     }
 
     public override async Task Update(SaveAppointmentViewModel vm, int id)
