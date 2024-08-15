@@ -1,0 +1,88 @@
+﻿@using PatientMgmt.Core.Application.ViewModels.TestResults
+@using PatientMgmt.Core.Domain.Enums
+@model List<ConsultResultsViewModel>
+@{ 
+    ViewData["Title"] = "Consult Results";
+}
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered mt-5">
+      <div class="column is-7">
+        <div class="box">
+
+            <div class="content"> 
+              <div class="is-flex is-justify-content-center is-align-items-center mb-4">
+                <h4 class="is-size-5 has-text-weight-medium">Lab Test Results</h4>
+              </div>
+            </div>
+
+              @if (Model.FirstOrDefault()?.IsAppointmentCompleted ?? false)
+                    {
+                        <table class="table is-fullwidth is-striped is-narrow">
+                            <thead>
+                                <tr>
+                                    <th>Test Name</th>
+                                    <th>Result</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var result in Model)
+                                {
+                                    <tr>
+                                        <td>@result.TestName</td>
+
+                                        @if(result.Results == null)
+                                        {
+                                          <td>Awaiting Results</td>
+                                        }else{
+                                          <td>@result.Results</td>
+                                        }
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="field is-grouped is-grouped-centered">
+                            <p class="control">
+                                <a asp-controller="Appointment" asp-action="Index" class="button is-light">Close</a>
+                            </p>
+                        </div>
+                    }
+                    else
+                    {
+                        <form method="post" enctype="multipart/form-data" asp-controller="Appointment" asp-action="CompleteAppt">
+
+                            <input type="hidden" name="AppointmentId" value="@ViewBag.AppointmentId" />
+
+                            <table class="table is-fullwidth is-striped is-narrow"> 
+                                <thead>
+                                    <tr>
+                                        <th>Test Name</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var result in Model) {
+                                        <tr>
+                                            <td>@result.TestName</td>
+                                            <td>@result.ResultStatus</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                            <div class="field is-grouped is-grouped-centered">
+                                <p class="control">
+                                    <button type="submit" class="button is-primary">Complete Appointment</button>
+                                </p>
+                                <p class="control">
+                                    <a asp-controller="Appointment" asp-action="Index" class="button is-light">Cancel</a>
+                                </p>
+                            </div>
+                        </form>
+                    }  
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
