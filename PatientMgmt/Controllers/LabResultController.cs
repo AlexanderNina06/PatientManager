@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Crypto.Engines;
 using PatientMgmt.Core.Application;
 using PatientMgmt.Core.Application.Interfaces.Services;
+using PatientMgmt.Core.Application.ViewModels.TestResults;
 
 namespace PatientMgmt.Controllers
 {
@@ -17,9 +19,31 @@ namespace PatientMgmt.Controllers
             _patientService = patientService;
         }
 
-        public ActionResult Index()
+        public async Task<ActionResult> Index(FilterTrByIdViewModel? vm)
         {
-            return View();
+            ViewBag.FilterIdCard = vm.IdCard; 
+            ViewBag.IsSearch = vm.IdCard.HasValue;
+            return View(await _testResultService.GetAllPendingTestResults(vm));
+        }
+
+        public async Task<IActionResult> ReportResults(int id)
+        {
+            SaveTestResultViewModel vm = await _testResultService.GetByIdSaveViewModel(id);
+            return View("ReportResult", vm);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ReportResults(SaveTestResultViewModel vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("ReportResult", vm);
+            }
+            SaveTestResultViewModel TrVm = await _testResultService.GetByIdSaveViewModel(vm.Id);
+            TrVm.Result = vm.Result;
+
+            await _testResultService.Update(TrVm, vm.Id);
+            return RedirectToRoute(new { controller = "LabResult", action = "Index" });
         }
 
     }

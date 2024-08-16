@@ -102,8 +102,6 @@ CreateMap<TestResult,TestResultsViewModel>()
 
 CreateMap<TestResult,SaveTestResultViewModel>()
 .ForMember(dest => dest.ResultStatus, opt => opt.MapFrom(src => src.ResultStatus.ToString()))
-.ForMember(dest => dest.Patients, opt => opt.Ignore())
-.ForMember(dest => dest.Appointments, opt => opt.Ignore())
 .ReverseMap()
 .ForMember(dest => dest.Created, opt => opt.Ignore())
 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore())

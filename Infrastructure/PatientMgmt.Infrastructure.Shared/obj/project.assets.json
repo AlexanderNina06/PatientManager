@@ -1215,11 +1215,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
       "projectName": "PatientMgmt.Infrastructure.Shared",
-      "projectPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
+      "projectPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\PatientMgmt.Infrastructure.Shared.csproj",
       "packagesPath": "C:\\Users\\18297\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\obj\\",
+      "outputPath": "C:\\Users\\18297\\PatientManager\\Infrastructure\\PatientMgmt.Infrastructure.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\18297\\AppData\\Roaming\\NuGet\\NuGet.Config",
