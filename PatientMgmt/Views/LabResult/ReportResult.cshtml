@@ -1,0 +1,42 @@
+﻿@model SaveTestResultViewModel
+@{
+    ViewData["Title"] = "Report Result";
+}
+<section>
+    <div class="container">
+        <div class="columns is-centered mt-5">
+            <div class="column is-7">
+                <div class="box">
+
+                        <form method="post" asp-controller="LabResult" asp-action="ReportResults">
+
+                            <div class="field">
+                                <label asp-for="Result" class="label">Result</label>
+                                <div class="control">
+                                <input asp-for="Result" class="input" type="textarea"/>
+                                </div>
+                            </div>
+
+
+                            <input type="hidden" asp-for="Id" />
+
+                            <div class="field is-grouped is-grouped-centered">
+                                <p class="control">
+                                    <button type="submit" class="button is-primary">
+                                    Report
+                                    </button>
+                                </p>
+                                <p class="control">
+                                    <a  asp-controller="LabResult" asp-action="Index" class="button is-light">
+                                    Cancel
+                                    </a>
+                                </p>
+                            </div
+
+                        </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
