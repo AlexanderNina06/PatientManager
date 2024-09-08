@@ -1,0 +1,88 @@
+﻿@model SaveUserViewModel
+@{
+    ViewData["Tittle"] = "Save User";
+}
+<section>
+    <div class="container">
+        <div class="columns is-centered mt-5">
+            <div class="column is-7">
+                <div class="box">
+
+                        <form method="post" asp-controller="User" asp-action="Register">
+
+                            <div class="field">
+                                <label asp-for="FirstName" class="label">First Name</label>
+                                <div class="control">
+                                <input asp-for="FirstName" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="LastName" class="label">Last Name</label>
+                                <div class="control">
+                                <input asp-for="LastName" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="Email" class="label">Email</label>
+                                <div class="control">
+                                <input asp-for="Email" class="input" type="email"/>
+                                </div>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="UserName" class="label">User Name</label>
+                                <div class="control">
+                                <input asp-for="UserName" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="Phone" class="label">Phone</label>
+                                <div class="control">
+                                <input asp-for="Phone" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="Phone" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="Password" class="label">Password</label>
+                                <div class="control">
+                                <input asp-for="Password" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+
+                            <div class="field">
+                                <label asp-for="ConfirmPassword" class="label">Confirm Password</label>
+                                <div class="control">
+                                <input asp-for="ConfirmPassword" class="input" type="text"/>
+                                </div>
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+
+                            <div class="field is-grouped is-grouped-centered">
+                                <p class="control">
+                                    <button type="submit" class="button is-primary">
+                                    Submit
+                                    </button>
+                                </p>
+                                <p class="control">
+                                    <a  asp-controller="User" asp-action="Index" class="button is-light">
+                                    Cancel
+                                    </a>
+                                </p>
+                            </div
+
+                        </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

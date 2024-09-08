@@ -1,0 +1,53 @@
+﻿@using PatientMgmt.Infrastructure.Identity.Entities
+@model IEnumerable<ApplicationUser>
+@{
+    ViewData["Title"] = "Users list";
+}
+    <div class="buttons is-right">
+        <a asp-controller="User" asp-action="Register" class="button is-primary is-outlined is-responsive">Add new user</a>
+    </div>
+
+@if (Model.Any())
+{
+
+<div class="columns is-centered">
+  <table class="table">
+
+    <thead>
+      <tr>
+        <th>User Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>User Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+      <tr>
+        <td>@user.Id</td>
+        <td>@user.FirstName</td>
+        <td>@user.LastName</td>
+        <td>@user.Email</td>   
+
+        <td>@user.UserName</td>
+        <td>
+          <a href="#" class="btn btn-primary">Edit </a>
+          <a href="#" class="btn btn-danger" style="color: red;"> Delete</a>
+        </td>
+      </tr>
+    }
+    </tbody>
+  </table>
+</div>
+}
+else
+{
+  <div class="card">
+    <div class="card-header">
+      No Users Added Yet
+    </div>
+  </div>
+}

@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using PatientMgmt.Core.Application;
 using PatientMgmt.Core.Application.Interfaces.Services;
 using PatientMgmt.Core.Application.ViewModels.Appointments;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PatientMgmt.Controllers
 {
+    [Authorize]
     public class AppointmentController : Controller
     {
         private readonly IAppointmentService _appointmentService;

@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Build.Framework;
 using PatientMgmt.Core.Application;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PatientMgmt.Controllers
 {
+    [Authorize]
     public class LabTestController : Controller
     {
         private readonly ILabTestService _labTestService;

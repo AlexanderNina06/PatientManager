@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using PatientMgmt.Core.Application;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PatientMgmt.Controllers
 {
+    [Authorize]
     public class DoctorController : Controller
     {
         private readonly IDoctorService _doctorService;

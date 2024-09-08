@@ -1,8 +1,10 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PatientMgmt.Models;
 
 namespace PatientMgmt.Controllers;
+[Authorize]
 
 public class HomeController : Controller
 {

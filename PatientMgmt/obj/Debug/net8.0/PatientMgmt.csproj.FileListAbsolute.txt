@@ -113,7 +113,6 @@ C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extens
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.Features.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
@@ -377,13 +376,11 @@ C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Composition.Ho
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Composition.TypedParts.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
-C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Formats.Asn1.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Memory.Data.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Runtime.Caching.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\System.Text.Json.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\af\Humanizer.resources.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\ar\Humanizer.resources.dll
 C:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\az\Humanizer.resources.dll
@@ -576,3 +573,14 @@ C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\refint\PatientMgmt.dl
 C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\PatientMgmt.pdb
 C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\PatientMgmt.genruntimeconfig.cache
 C:\Users\18297\PatientManager\PatientMgmt\obj\Debug\net8.0\ref\PatientMgmt.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Core.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Stores.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\System.Formats.Asn1.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\System.Text.Json.dll
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\package-lock.json
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\package.json

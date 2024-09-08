@@ -3,9 +3,11 @@ using Org.BouncyCastle.Crypto.Engines;
 using PatientMgmt.Core.Application;
 using PatientMgmt.Core.Application.Interfaces.Services;
 using PatientMgmt.Core.Application.ViewModels.TestResults;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PatientMgmt.Controllers
 {
+    [Authorize]
     public class LabResultController : Controller
     {
         private readonly ITestResultService _testResultService;

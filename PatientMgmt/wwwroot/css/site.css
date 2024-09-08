@@ -1,22 +1,30 @@
-html {
-  font-size: 14px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+@layer components{
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
+    .wrapper{
+        @apply w-[90%] mx-auto overflow-hidden max-w-screen-xl;
+    }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+    .button{
+        @apply bg-sky-400 text-vary-light-gray block w-max py-4 px-12 rounded-full;
+    }
+    
+    .footer-area{
+        grid-template-areas:
+        "form"
+        "navigation"
+        "social-media"
+        "logo"
+        "copy";
+    }
+    
+    .footer-area-md{
+        grid-template-areas:
+        "logo           navigation  form"
+        "social-media   navigation  copy"
+        ;
+    }
 }
