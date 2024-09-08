@@ -2,9 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PatientMgmt.Core.Application;
+using PatientMgmt.Core.Application.Interfaces.Services;
 using PatientMgmt.Infrastructure.Identity.Contexts;
 using PatientMgmt.Infrastructure.Identity.Entities;
-using PatientMgmt.Core.Application;
+using PatientMgmt.Infrastructure.Identity.Interfaces;
+using PatientMgmt.Infrastructure.Identity.Services;
 
 namespace PatientMgmt.Infrastructure.Identity;
 
@@ -39,10 +42,16 @@ public static void AddIdentityInfrastructure(this IServiceCollection services,IC
 
     #endregion
 
+    #region AutoMapper
+    #endregion
+
     #region Service
     
     services.AddTransient<IAccountService, AccountService>();
+    services.AddTransient<IInfrastructureUserService, UserService>();
 
     #endregion
+
+
 }
 }

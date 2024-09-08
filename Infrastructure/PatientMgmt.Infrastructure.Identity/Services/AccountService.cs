@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using PatientMgmt.Core.Application;
 using PatientMgmt.Infrastructure.Identity.Entities;
 using PatientMgmt.Core.Domain;
+using PatientMgmt.Core.Application;
+using Microsoft.EntityFrameworkCore.Query.Internal;
 namespace PatientMgmt.Infrastructure.Identity;
 
 public class AccountService : IAccountService
@@ -79,12 +80,65 @@ public class AccountService : IAccountService
         FirstName = request.FirstName,  
         LastName = request.LastName,  
         UserName = request.UserName,
+        UserType = Roles.Admin.ToString()
       };
 
       var result = await _userMangaer.CreateAsync(user, request.Password);
       if(result.Succeeded)
       {
          await _userMangaer.AddToRoleAsync(user, Roles.Admin.ToString());
+      }
+      else
+      {
+        response.HasError = true;
+        response.Error = "An error has ocurred during process to register your user";
+        return response;
+      }
+      
+      return response;
+    }
+
+    public async Task<RegisterResponse> RegisterUserAsync(RegisterRequest request, string origin)
+    {
+      RegisterResponse response = new()
+      {
+        HasError = false
+      };
+
+      var userWithSameUserName = await _userMangaer.FindByNameAsync(request.UserName);
+      if(userWithSameUserName != null)
+      {
+        response.HasError = true;
+        response.Error = $"User name '{request.UserName}' already Exist.";
+        return response;
+      }
+
+      var userWithSameEmail = await _userMangaer.FindByEmailAsync(request.Email);
+      if(userWithSameEmail != null)
+      {
+        response.HasError = true;
+        response.Error= $"Email {request.Email} is already registered.";
+        return response;
+      }
+
+      var user = new ApplicationUser
+      {
+        Email = request.Email,
+        FirstName = request.FirstName,  
+        LastName = request.LastName,  
+        UserName = request.UserName,
+        UserType = request.UserType
+      };
+
+      var result = await _userMangaer.CreateAsync(user, request.Password);
+      if(result.Succeeded)
+      {
+            if(user.UserType == Roles.Admin.ToString()){
+            await _userMangaer.AddToRoleAsync(user, Roles.Admin.ToString());
+            }
+            else if(user.UserType == Roles.Assistant.ToString()){
+            await _userMangaer.AddToRoleAsync(user, Roles.Assistant.ToString());
+            }
       }
       else
       {

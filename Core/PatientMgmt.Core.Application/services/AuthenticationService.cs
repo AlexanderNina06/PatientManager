@@ -1,13 +1,16 @@
 ﻿
 using AutoMapper;
+using PatientMgmt.Core.Application.Interfaces.Repositories;
+using PatientMgmt.Core.Application.ViewModels.Users;
+using PatientMgmt.Core.Domain;
 
 namespace PatientMgmt.Core.Application;
 
-public class UserService : IUserService
+public class AuthenticationService : IAuthenticationService
 {
   private readonly IAccountService _accountService;
   private readonly IMapper _mapper;
-  public UserService(IAccountService accountService, IMapper mapper)
+  public AuthenticationService(IAccountService accountService, IMapper mapper)
   {
     _accountService = accountService;
     _mapper = mapper;
@@ -22,7 +25,12 @@ public class UserService : IUserService
     public async Task<RegisterResponse> RegisterAsync(SaveUserViewModel vm, string origin)
     {
         RegisterRequest registerRequest= _mapper.Map<RegisterRequest>(vm);
+        if(vm.UserType == Roles.Admin.ToString() || vm.UserType == null)
+        {
         return await _accountService.RegisterAdminUserAsync(registerRequest, origin);
+        }
+        return await _accountService.RegisterUserAsync(registerRequest, origin);
+        
     }
 
     public async Task SignOutAsync()

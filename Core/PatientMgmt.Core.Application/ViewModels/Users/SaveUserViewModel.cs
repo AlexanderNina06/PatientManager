@@ -33,6 +33,8 @@ public string Email { get; set; }
 [DataType(DataType.PhoneNumber)]
 public string Phone { get; set; }
 
+public string? UserType { get; set; }
+
 public bool HasError { get; set; }
 public string? Error { get; set; }
 }

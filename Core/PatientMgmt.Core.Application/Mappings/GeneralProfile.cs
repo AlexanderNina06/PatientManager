@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using PatientMgmt.Core.Application.DTOs.User;
+using PatientMgmt.Core.Application.ViewModels.Users;
 using PatientMgmt.Core.Domain;
 
 namespace PatientMgmt.Core.Application;
@@ -111,7 +113,7 @@ CreateMap<TestResult,SaveTestResultViewModel>()
 .ForMember(dest => dest.LabTest, opt => opt.Ignore());
 
 
-// User Mappings
+// Authentication Mappings
 CreateMap<AuthenticationRequest, LoginViewModel>()
 	.ForMember(dest => dest.HasError, opt => opt.Ignore())
 	.ForMember(dest => dest.Error, opt => opt.Ignore())

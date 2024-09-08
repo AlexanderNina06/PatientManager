@@ -17,7 +17,7 @@ public static void AddApplicationLayer(this IServiceCollection services, IConfig
 	  services.AddTransient<IDoctorService, DoctorService>();
     services.AddTransient<IPatientService, PatientService>();
     services.AddTransient<ILabTestService, LabTestService>();
-    services.AddTransient<IUserService, UserService>();
+    services.AddTransient<IAuthenticationService, AuthenticationService>();
     services.AddTransient<IAppointmentService, AppointmentService>();
     services.AddTransient<ITestResultService, TestResultService>();
 

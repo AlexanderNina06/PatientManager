@@ -1,8 +1,12 @@
-﻿namespace PatientMgmt.Core.Application;
+using System;
+using PatientMgmt.Core.Application.DTOs.User;
+
+namespace PatientMgmt.Core.Application.Interfaces.Services;
 
 public interface IUserService
 {
-Task<AuthenticationResponse> LoginAsync(LoginViewModel vm);
-Task<RegisterResponse> RegisterAsync(SaveUserViewModel vm, string origin);
-Task SignOutAsync();
+    Task<List<UserDto>> GetAllUsersAsync();
+    Task CreateUserAsync(CreateUserDto dto);
+    Task UpdateUserAsync(UpdateUserDto dto, int userId);
+    Task DeleteUserAsync(int userId);
 }
