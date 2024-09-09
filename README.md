@@ -22,6 +22,6 @@ This project implements a patient management system using ASP.NET Core MVC and a
 * C#
 * ASP.NET Core
 * Entity Framework
-* Bootstrap
+* Bulma
 * Identity
 * Email Service
