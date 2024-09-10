@@ -584,3 +584,4 @@ c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\System.Formats.A
 c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\refs\System.Text.Json.dll
 c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\package-lock.json
 c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\package.json
+c:\Users\18297\PatientManager\PatientMgmt\bin\Debug\net8.0\MailKit.dll

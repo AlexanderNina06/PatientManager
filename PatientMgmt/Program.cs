@@ -5,6 +5,7 @@ using PatientMgmt.Infrastructure.Identity.Seeds;
 using PatientMgmt.Infrastructure.Identity;
 using PatientMgmt.Core.Application;
 using PatientMgmt.Middlewares;
+using PatientMgmt.Infrastructure.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddSession();
 builder.Services.AddPersistenceInfrastructure(builder.Configuration);
 builder.Services.AddIdentityInfrastructure(builder.Configuration);
 builder.Services.AddApplicationLayer(builder.Configuration);
+builder.Services.AddSharedInfrastructure(builder.Configuration);
 builder.Services.AddScoped<LoginAuthorize>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddTransient<ValidateUserSession, ValidateUserSession>();
