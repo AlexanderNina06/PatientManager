@@ -19,7 +19,9 @@ This project implements a patient management system using ASP.NET Core MVC and a
 * **Laboratory result management**
 
 # Technologies
-* ASP.NET Core MVC
-* Entity Framework Core
-* Bootstrap
 * C#
+* ASP.NET Core
+* Entity Framework
+* Bulma
+* Identity
+* Email Service
