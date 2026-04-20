@@ -26,7 +26,7 @@ COPY . .
 # --- Test stage: runs before publish; failing tests abort the build ---
 FROM build AS test
 WORKDIR /src
-RUN dotnet test "Tests/PatientMgmt.Tests/PatientMgmt.Tests.csproj" --no-restore --logger "console;verbosity=normal"
+RUN dotnet test "Tests/PatientMgmt.Tests/PatientMgmt.Tests.csproj" --logger "console;verbosity=normal"
 
 # --- Publish stage ---
 FROM build AS publish
