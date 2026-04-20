@@ -31,7 +31,7 @@ RUN dotnet test "Tests/PatientMgmt.Tests/PatientMgmt.Tests.csproj" --logger "con
 # --- Publish stage ---
 FROM build AS publish
 WORKDIR "/src/PatientMgmt"
-RUN npm install
+RUN npm install && chmod -R +x node_modules/.bin/
 RUN dotnet publish "PatientMgmt.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
