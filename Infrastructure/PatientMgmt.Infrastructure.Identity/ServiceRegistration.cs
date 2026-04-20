@@ -29,7 +29,14 @@ public static void AddIdentityInfrastructure(this IServiceCollection services,IC
     #endregion
 
     #region Identity
-    services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<IdentityContext>()
+    services.AddIdentity<ApplicationUser, IdentityRole>(options => 
+    {
+        options.Password.RequiredLength = 6;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequireLowercase = false;
+
+    }).AddEntityFrameworkStores<IdentityContext>()
         .AddDefaultTokenProviders();
 
     services.ConfigureApplicationCookie(options =>

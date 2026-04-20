@@ -2,8 +2,10 @@
 using PatientMgmt.Infrastructure.Identity.Entities;
 using PatientMgmt.Core.Domain;
 using PatientMgmt.Core.Application;
-using Microsoft.EntityFrameworkCore.Query.Internal;
+using PatientMgmt.Core.Application.Interfaces.Services;
 namespace PatientMgmt.Infrastructure.Identity;
+using PatientMgmt.Core.Application.DTOs.Email;
+
 
 public class AccountService : IAccountService
 {
@@ -12,10 +14,13 @@ public class AccountService : IAccountService
   //SignInManger: LogIn and LogOut
   private readonly SignInManager<ApplicationUser> _SignInManager;
 
-  public AccountService (UserManager<ApplicationUser> userMangaer, SignInManager<ApplicationUser> signInManager)
+  private readonly IEmailService _emailService;
+
+  public AccountService (UserManager<ApplicationUser> userMangaer, SignInManager<ApplicationUser> signInManager, IEmailService emailService)
   {
     _userMangaer = userMangaer;
     _SignInManager = signInManager;
+    _emailService = emailService;
   }
     public async Task<AuthenticationResponse> AuthenticateAsync(AuthenticationRequest request)
     {
@@ -87,6 +92,12 @@ public class AccountService : IAccountService
       if(result.Succeeded)
       {
          await _userMangaer.AddToRoleAsync(user, Roles.Admin.ToString());
+         await _emailService.SendAsync(new EmailRequest()
+        {
+                To = user.Email,
+                Body = $"Welcome to Patient Management, Make your Appointment!",
+                Subject = "Patient Management App"
+        });
       }
       else
       {
@@ -154,4 +165,5 @@ public class AccountService : IAccountService
     {
         await _SignInManager.SignOutAsync();
     }
+
 }

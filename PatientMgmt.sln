@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.4.11620.152 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientMgmt", "PatientMgmt\PatientMgmt.csproj", "{6F87EDA8-4C5F-4BE8-8C56-1CCA5AA0DC87}"
 EndProject
@@ -18,6 +18,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientMgmt.Infrastructure.Shared", "Infrastructure\PatientMgmt.Infrastructure.Shared\PatientMgmt.Infrastructure.Shared.csproj", "{553D147A-62DF-4C41-946F-E302E2EB562E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatientMgmt.Infrastructure.Identity", "Infrastructure\PatientMgmt.Infrastructure.Identity\PatientMgmt.Infrastructure.Identity.csproj", "{F1F516A1-BFA8-4493-83F0-E5871836FD04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EB1C3B41-20D2-4DBB-A383-237D309EB23F}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,5 +65,8 @@ Global
 		{8A1C0296-EF0B-4252-BDEC-2BD0B6FB2A88} = {AE0FBB28-2FD9-4BB8-84BA-EA0178AEE845}
 		{553D147A-62DF-4C41-946F-E302E2EB562E} = {AE0FBB28-2FD9-4BB8-84BA-EA0178AEE845}
 		{F1F516A1-BFA8-4493-83F0-E5871836FD04} = {AE0FBB28-2FD9-4BB8-84BA-EA0178AEE845}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4696B507-820C-42E4-8910-8871DF20D111}
 	EndGlobalSection
 EndGlobal

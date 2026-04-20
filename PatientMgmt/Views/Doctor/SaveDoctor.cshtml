@@ -47,12 +47,13 @@
                                <label asp-for="PictureFile" class="form-label">Choose a file: </label>
                                 @if (editMode)
                                 {
-                                <input  asp-for="PictureFile" class="form-control" />
+                                    <input asp-for="PictureFile" type="file" class="form-control" />
                                 }
                                 else
                                 {
-                                <input Required asp-for="PictureFile" class="form-control" />
+                                    <input required asp-for="PictureFile" type="file" class="form-control" />
                                 }
+                                <span asp-validation-for="PictureFile" class="text-danger"></span>
                             </div>
 
                             <div class="field">
@@ -76,7 +77,7 @@
                                     Cancel
                                     </a>
                                 </p>
-                            </div
+                            </div>
 
                         </form>
 

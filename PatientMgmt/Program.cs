@@ -1,11 +1,13 @@
-using PatientMgmt.Infrastructure.Persistence;
-using PatientMgmt.Infrastructure.Identity.Entities;
 using Microsoft.AspNetCore.Identity;
-using PatientMgmt.Infrastructure.Identity.Seeds;
-using PatientMgmt.Infrastructure.Identity;
+using Microsoft.Extensions.Azure;
 using PatientMgmt.Core.Application;
-using PatientMgmt.Middlewares;
+using PatientMgmt.Infrastructure.Identity;
+using PatientMgmt.Infrastructure.Identity.Entities;
+using PatientMgmt.Infrastructure.Identity.Seeds;
+using PatientMgmt.Infrastructure.Persistence;
 using PatientMgmt.Infrastructure.Shared;
+using PatientMgmt.Middlewares;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +21,11 @@ builder.Services.AddSharedInfrastructure(builder.Configuration);
 builder.Services.AddScoped<LoginAuthorize>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddTransient<ValidateUserSession, ValidateUserSession>();
+var storageConnectionString = builder.Configuration.GetConnectionString("DoctorConfig");
+builder.Services.AddAzureClients(azureBuilder =>
+{
+    azureBuilder.AddBlobServiceClient(storageConnectionString);
+});
 
 var app = builder.Build();
 

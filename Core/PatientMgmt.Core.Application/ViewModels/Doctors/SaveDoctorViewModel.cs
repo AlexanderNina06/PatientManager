@@ -11,5 +11,5 @@ public class SaveDoctorViewModel
   public int Phone { get; set; }
   public int IdCard { get; set; }
   public string? Picture { get; set; }
-  public IFormFile PictureFile { get; set; }
+  public IFormFile? PictureFile { get; set; }
 }
