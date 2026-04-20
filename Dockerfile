@@ -16,12 +16,20 @@ COPY ["Infrastructure/PatientMgmt.Infrastructure.Identity/PatientMgmt.Infrastruc
 COPY ["Infrastructure/PatientMgmt.Infrastructure.Shared/PatientMgmt.Infrastructure.Shared.csproj", "Infrastructure/PatientMgmt.Infrastructure.Shared/"]
 COPY ["Core/PatientMgmt.Core.Application/PatientMgmt.Core.Application.csproj", "Core/PatientMgmt.Core.Application/"]
 COPY ["Core/PatientMgmt.Core.Domain/PatientMgmt.Core.Domain.csproj", "Core/PatientMgmt.Core.Domain/"]
+COPY ["Tests/PatientMgmt.Tests/PatientMgmt.Tests.csproj", "Tests/PatientMgmt.Tests/"]
 
-# Restore packages for the main project (other project references are present)
 RUN dotnet restore "PatientMgmt/PatientMgmt.csproj"
+RUN dotnet restore "Tests/PatientMgmt.Tests/PatientMgmt.Tests.csproj"
 
-# Copy the rest of the source and publish
 COPY . .
+
+# --- Test stage: runs before publish; failing tests abort the build ---
+FROM build AS test
+WORKDIR /src
+RUN dotnet test "Tests/PatientMgmt.Tests/PatientMgmt.Tests.csproj" --no-restore --logger "console;verbosity=normal"
+
+# --- Publish stage ---
+FROM build AS publish
 WORKDIR "/src/PatientMgmt"
 RUN dotnet publish "PatientMgmt.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
@@ -33,6 +41,6 @@ EXPOSE 8080
 EXPOSE 443
 
 # Copy published output
-COPY --from=build /app/publish .
+COPY --from=publish /app/publish .
 
 ENTRYPOINT ["dotnet", "PatientMgmt.dll"]
